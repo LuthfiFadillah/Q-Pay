@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.tesxsight2.keranjang"
+
+    android:scrollbars="none"
+    android:layout_weight="1">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
+        <TableRow>
+
+            <TextView
+                android:layout_width="170dp"
+                android:padding="10dip"
+                android:text="Nama Barang" />
+            <TextView
+                android:layout_width="100dp"
+                android:padding="10dip"
+                android:text="Harga" />
+            <TextView
+                android:gravity="right"
+                android:padding="10dip"
+                android:text="Qty" />
+        </TableRow>
+        <TableRow android:layout_height="40dp">
+            <TextView
+                android:layout_width="170dp"
+                android:padding="30dip"
+                android:text="Barang 1" />
+            <TextView
+                android:padding="30dip"
+                android:layout_width="100dp"
+                android:text="10000" />
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="10dp"
+                android:layout_height="74dp"
+                android:stretchColumns="1">
+                <TableRow>
+                    <TextView
+                        android:layout_width="46dp"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="1" />
+                </TableRow>
+                <TableRow>
+                    <Button
+                        android:id="@+id/addQty1"
+                        android:layout_width="15dp"
+                        android:layout_height="30dp"
+                        android:padding="15dp"
+                        />
+                </TableRow>
+                <TableRow>
+                    <Button
+                        android:id="@+id/rmvQty1"
+                        android:layout_width="10dp"
+                        android:layout_height="300dp"
+                        android:padding="15dp"
+                        />
+                </TableRow>
+            </TableLayout>
+        </TableRow>
+        <TableRow android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="130dp"
+                android:padding="30dip"
+                android:text="Barang 2" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:padding="30dip"
+                android:text="10000" />
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="10dp"
+                android:layout_height="74dp"
+                android:stretchColumns="1">
+                <TableRow>
+                    <TextView
+                        android:layout_width="46dp"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="1" />
+                </TableRow>
+                <TableRow>
+                    <Button
+                        android:id="@+id/addQty2"
+                        android:layout_width="15dp"
+                        android:layout_height="30dp"
+                        android:padding="15dp"
+                        />
+                </TableRow>
+                <TableRow>
+                    <Button
+                        android:id="@+id/rmvQty2"
+                        android:layout_width="10dp"
+                        android:layout_height="300dp"
+                        android:padding="15dp"
+                        />
+                </TableRow>
+            </TableLayout>
+
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="101dp"
+        android:layout_height="24dp"
+        android:layout_alignBaseline="@+id/totalHarga"
+        android:layout_alignBottom="@+id/totalHarga"
+        android:layout_alignEnd="@+id/addBarang"
+        android:layout_alignRight="@+id/addBarang"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:text="Total                 : "
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="343dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="101dp"
+        android:layout_height="24dp"
+        android:layout_alignBaseline="@+id/sisa"
+        android:layout_alignBottom="@+id/sisa"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:text="Total                 : "
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="343dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="101dp"
+        android:layout_height="24dp"
+        android:layout_alignBaseline="@+id/jumlahSaldo"
+        android:layout_alignBottom="@+id/jumlahSaldo"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:text="Saldo                : "
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="343dp" />
+
+    <TextView
+        android:id="@+id/totalHarga"
+        android:layout_width="200dp"
+        android:layout_height="19dp"
+        android:layout_above="@+id/jumlahSaldo"
+        android:layout_alignLeft="@+id/jumlahSaldo"
+        android:layout_alignStart="@+id/jumlahSaldo"
+        android:gravity="right"
+        android:text="Ini total harga barang"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="343dp" />
+
+    <TextView
+        android:id="@+id/jumlahSaldo"
+        android:layout_width="200dp"
+        android:layout_height="19dp"
+        android:layout_above="@+id/sisa"
+        android:layout_alignLeft="@+id/sisa"
+        android:layout_alignStart="@+id/sisa"
+        android:gravity="right"
+        android:text="Ini jumlah saldo sekarang"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="378dp" />
+
+    <TextView
+        android:id="@+id/sisa"
+        android:layout_width="200dp"
+        android:layout_height="19dp"
+        android:layout_above="@+id/bayar"
+        android:layout_alignEnd="@+id/bayar"
+        android:layout_alignRight="@+id/bayar"
+        android:layout_marginBottom="25dp"
+        android:gravity="right"
+        android:text="Saldo dikurangi harga barang"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="412dp" />
+
+    <Button
+        android:id="@+id/addBarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bayar"
+        android:layout_alignBottom="@+id/bayar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="56dp"
+        android:layout_marginStart="56dp"
+        android:text="Add Item"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="448dp"
+        android:onClick="buttonClick"
+        />
+
+    <Button
+        android:id="@+id/bayar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginRight="58dp"
+        android:text="Pay"
+        tools:layout_editor_absoluteX="269dp"
+        tools:layout_editor_absoluteY="447dp"
+        />
+</RelativeLayout>
